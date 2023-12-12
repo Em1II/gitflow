@@ -4,7 +4,7 @@ import pygame
 def load_image(name, colorkey=None):
     fullname = os.path.join('data', name)
     try:
-        image = pygame.image.load(fullname).convert()
+        image = pygame.image.load(fullname).convert_alpha()
     except pygame.error as message:
         print(message)
         raise SystemExit(message)
